@@ -1,0 +1,106 @@
+\documentclass[lualatex,12pt,a4paper]{article}
+\usepackage{style/arpafvg}
+\usepackage{caption,booktabs,siunitx,float,pdflscape}
+\usepackage{natbib}
+\usepackage{lscape}
+\usepackage{placeins}
+\usepackage{svg}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{BOZZA}
+%\SetWatermarkScale{1.2}
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+\title
+{Effetti sulla matrice ambientale ARIA delle azioni di contenimento del COVID-19
+ \\ 
+\Large{Relazione tecnica}}
+\author
+{SOS Qualità dell'aria\\
+ Centro regionale di modellistica ambientale (CRMA)\\
+ IPAS Analisi chimiche ambientali
+}
+\date{giugno 2020}
+\maketitle
+
+
+\pagebreak
+ \begingroup
+   \hypersetup{hidelinks}
+   \section*{Autori e ringraziamento}
+   Edi Baiutti,
+   Marco Bellini,
+   Giovanni Bonafè,
+   Andrea Mistaro,
+   Francesco Montanari,
+   Alessia Movia,
+   Alessandra Petrini,
+   Fulvio Stel,
+   Arianna Tolloi,
+   Marco Visintin
+   
+Questo lavoro è stato possibile anche grazie al progetto europeo LIFE-PREPAIR (LIFE15 IPE IT013, www.lifeprepair.eu), che opera per la qualità dell'aria nel Nord Italia e in Slovenia.
+
+   \tableofcontents
+   \listoffigures
+   \listoftables
+ \endgroup
+\pagebreak
+
+\section*{Sommario}\label{cap:intro}
+\addcontentsline{toc}{section}{Sommario}
+\input{sommario}
+\pagebreak
+
+\section*{Introduzione}\label{cap:intro}
+\addcontentsline{toc}{section}{Introduzione}
+\input{intro}
+
+\FloatBarrier
+\section{Determinanti}\label{cap:determinanti}
+\input{determinanti}
+\FloatBarrier
+\input{meteo}
+
+\FloatBarrier
+\section{Pressioni}\label{cap:pressioni}
+\subsection{Emissioni in atmosfera}
+\input{emissioni}
+
+\FloatBarrier
+\section{Stato}
+\subsection{Qualità dell'aria: andamento}\label{cap:qaria}
+\input{macroinquinanti}
+\FloatBarrier
+%\subsection{Qualità dell'aria: test statistici}
+\subsection{Rapporti tra inquinanti}\label{cap:rapporti}
+\input{rapporti}
+\FloatBarrier
+\subsection{Caratterizzazione chimica delle polveri sottili}\label{cap:chimica}
+\paragraph{Metalli}\label{cap:metalli}
+\input{metalli}
+\FloatBarrier
+\paragraph{Idrocarburi policiclici aromatici}\label{cap:ipa}
+\input{ipa}
+
+%\section{Approfondimenti}
+%\subsection{Trasporto a grande distanza di polveri desertiche}
+%\subsection{Concentrazioni attese in assenza di azioni di contenimento}
+
+\FloatBarrier\pagebreak
+\section*{Conclusioni}
+\addcontentsline{toc}{section}{Conclusioni}
+\input{conclusioni}
+
+\FloatBarrier\pagebreak
+\section*{Glossario}
+\addcontentsline{toc}{section}{Glossario}
+\input{glossario}
+
+
+\FloatBarrier\pagebreak
+\bibliography{biblio}
+\bibliographystyle{apalike}
+
+\end{document}
